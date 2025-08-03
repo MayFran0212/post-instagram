@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#fotoPost img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#cabecalho {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.esquerdaCabecalho {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.esquerdaCabecalho img {
+  width: 35px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.esquerdaCabecalho img.zoom {
+  transform: scale(1.5);
+  z-index: 100;
+  position: relative;
+}
+
+#nomeUsuario {
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#nomeUsuario strong {
+  font-weight: 700;
+}
+
+.fa-ellipsis {
+  margin-right: 0.5rem;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#fotoPost {
+  position: relative;
+}
+
+.carrosselContainer {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrosselContainerImagens {
+  display: flex;
+  width: 150%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrosselImagem {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.carrosselBotao {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrosselBotao i {
+  font-size: 1.5rem;
+}
+
+.carrosselBotao.anterior {
+  left: 10px;
+}
+
+.carrosselBotao.proximo {
+  right: 10px;
+}
+
+.carrosselIndicadores {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.fa-circle {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.fa-heart {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.fa-comment {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.fa-bookmark {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.esquerdaFooter {
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 5px;
+}
+
+.direitaFooter {
+  margin-right: 0.5rem;
+}
+
+.icones {
+  display: flex;
+  margin-top: 15px;
+  flex-direction: row;
+  gap: 25px;
+}
+
+#numeroLikes {
+  font-weight: 700;
+}
+
+#iconesFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#legenda {
+  margin: 1rem 0.5rem;
+}
+
+#comentarios {
+  margin: 10px 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#comentarios input {
+  flex-grow: 1;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.fa-paper-plane {
+  font-size: 1.5rem;
+}
+
+#comentarios button {
+  width: 50px;
+  background-color: white;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+#containerInputComentarios {
+  width: 600px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#containerListaComentarios {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.listaComentarios {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemListaComentarios {
+  list-style: none;
+  padding: 0.8rem 1rem;
+  margin-top: 10px;
+  background-color: rgba(128, 128, 128, 0.123);
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.direitaCabecalho {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+#botaoPontos {
+  background-color: white;
+  border: none;
+}
+
+#caixaFlutuante {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.473);
+  border-radius: 1rem;
+  text-align: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.itemLista {
+  border-bottom: 1px solid gray;
+  list-style: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+}
+
+.itemLista:last-child {
+  border-bottom: 0;
+}
+
+.denunciar {
+  color: firebrick;
+}
+
+.curtido {
+  color: firebrick;
+  font-weight: 900;
+}
+
+.salvo {
+  color: black;
+  font-weight: 900;
+}
+
+.ativo {
+  color: white;
+}
+
+.comentarioAtivo {
+  color: black;
+  font-weight: 900;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+#comentarios,
+#caixaFlutuante {
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
