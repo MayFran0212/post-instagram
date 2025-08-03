@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Post Interativo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="post">
+      <header id="cabecalho">
+        <div class="esquerdaCabecalho">
+          <img
+            src="assets/img-profile.jpg"
+            alt="Maysa sorridente"
+            title="Maysa sorridente com roupas amarelas"
+            id="imagemPerfil"
+          />
+          <p id="nomeUsuario"><strong>mayfrancesquini</strong> • 1d</p>
+        </div>
+        <div class="direitaCabecalho">
+          <button id="botaoPontos" type="button" aria-label="Mais opções">
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+          <section id="caixaFlutuante" class="hide">
+            <div id="containerLista">
+              <ul id="listaFlutuante">
+                <li class="itemLista">Denunciar</li>
+                <li class="itemLista">Compartilhar</li>
+                <li class="itemLista">Copiar link</li>
+                <li class="itemLista">Incorporar</li>
+                <li class="itemLista">Sobre esta conta</li>
+                <li class="itemLista">Cancelar</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </header>
+
+      <main id="fotoPost">
+        <div class="carrosselContainer">
+          <div class="carrosselContainerImagens">
+            <img
+              src="assets/img-post.jpg"
+              alt="ondas de uma piscina"
+              title="ondas de uma piscina"
+              class="carrosselImagem"
+
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/23/14/42/feet-1853291_1280.jpg"
+              alt="pessoa sentada em uma piscina, só aparecem as pernas da pessoa na foto"
+              title="pessoa sentada na borda de uma piscina"
+              class="carrosselImagem" 
+            />
+            <img src="https://cdn.pixabay.com/photo/2017/06/09/09/28/swimming-pool-2386258_1280.jpg" alt="piscina com vista para uam área arborizada e bem ver" title="borda de uma piscina"
+            class="carrosselImagem" >
+          </div>
+          <button class="carrosselBotao anterior"><i class="fa-solid fa-circle-chevron-left"></i></button> <button class="carrosselBotao proximo"><i class="fa-solid fa-circle-chevron-right"></i></button> </div>
+
+  <div class="carrosselIndicadores">
+    </div>
+        </div>
+      </main>
+
+      <footer id="rodape">
+        <div id="iconesFooter">
+          <div class="esquerdaFooter">
+            <div class="icones">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <p id="numeroLikes"><span>19</span> curtidas</p>
+          </div>
+          <div class="direitaFooter">
+            <i class="fa-regular fa-bookmark"></i>
+          </div>
+        </div>
+        <div id="legenda">
+          <p id="textoLegenda">
+            <strong>mayfrancesquini</strong> Encontramos inspiração em todos os
+            lugares… inclusive nas pequenas ondas dançantes de uma piscina 🌊
+          </p>
+        </div>
+          <div id="containerListaComentarios">
+            <ul class="listaComentarios">
+            </ul>
+          </div>
+        <div id="comentarios" class="hide">
+          <div id="containerInputComentarios">
+          <input
+            type="text"
+            name="comentarios"
+            id="inputComentario"
+            placeholder="Digite seu comentário"
+          />
+          <button type="submit" id="botaoEnviarComentario">
+            <i
+              class="fa-regular fa-paper-plane"
+              title="Avião indicando que é para enviar"
+            ></i>
+          </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
